@@ -1,1 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
 
+ul li {
+    list-style-type: none;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 15px 48px 15px;
+    font-size: 13px;
+    color: #fff;
+    background-color: red;
+    
+}
+
+
+
+
+/* ------------------- first screen ----------------- */
+
+.header {
+    /* background-image: url('../images/header.png'); */
+    padding-top: 35px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: red;
+}
+
+.logo span {
+    color: #626fe4;
+}
+
+.menu {
+    margin-top: 10px;
+}
+
+.menu__item {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.menu__item a {
+    color: red;
+}
+
+.offer {
+    text-align: center;
+    margin-top: 226px;
+}
+
+.offer__text {
+    font-size: 22px;
+    margin: 50px 0 30px;
+}
+
+.offer__btn {
+    margin-bottom: 240px;
+}
