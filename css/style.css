@@ -9,7 +9,7 @@ ul li {
 }
 
 h1 {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 45px;
     text-transform: uppercase;
 }
@@ -18,13 +18,71 @@ a, a:hover, a:active {
     text-decoration: none;
 }
 
+a {
+display: inline-block;
+position: relative;
+text-decoration: none;
+}
+
+a::before{
+display: block;
+position: absolute;
+content: "";
+height: 2px;
+width: 0;
+background-color: red;
+transition: width .5s ease-in-out, left .5s ease-in-out;
+left: 50%;
+bottom: 0;
+}
+
+a::after{
+display: block;
+position: absolute;
+content: "";
+height: 2px;
+width: 0;
+background-color: red;
+transition: width .5s ease-in-out;
+left: 50%;
+bottom: 0;
+}
+
+a:hover::before{
+width: 50%;
+left: 0;
+}
+a:hover::after{
+width: 50%;
+}
+
 .btn {
     padding: 15px 48px 15px;
     font-size: 13px;
     color: #fff;
-    background-color: red;
-    
+    background-color: #ff0000;
+    transition: 0.5s;
 }
+
+.btn:hover {
+    border: 1px solid #ff0000;
+    background-color: #d6c2c2;
+    color: #ff0000;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+
 
 
 
@@ -32,44 +90,65 @@ a, a:hover, a:active {
 /* ------------------- first screen ----------------- */
 
 .header {
-    /* background-image: url('../images/header.png'); */
+    background: url('../images/vl.jpg')no-repeat;
+    background-size: cover;
     padding-top: 35px;
+    padding-bottom: 240px;
 }
 
-.logo {
+.nav__logo {
     font-size: 30px;
-    font-weight: bold;
     text-transform: uppercase;
-    color: red;
+    /* padding-bottom: 20px; */
+    color: #fff;
 }
 
-.logo span {
+.nav__logo span {
     color: #626fe4;
+    font-weight: 700;
 }
 
-.menu {
-    margin-top: 10px;
+.nav {
+    margin-left: auto;
 }
 
-.menu__item {
+.nav__menu {
+    margin-left: auto;
+    /* margin-top: 10px; */
+}
+
+.nav__item {
     font-size: 14px;
     text-transform: uppercase;
 }
 
-.menu__item a {
-    color: red;
+.nav__item a {
+    color: #fff;
 }
 
 .offer {
+    padding-top: 190px;
+    border-top: 1px solid #51525b;
     text-align: center;
-    margin-top: 226px;
+    color: #fff;
+
 }
 
 .offer__text {
     font-size: 22px;
-    margin: 50px 0 30px;
+    margin-top: 45px;
+    margin-bottom: 27px;
 }
 
 .offer__btn {
-    margin-bottom: 240px;
+
+}
+
+.nav__item:nth-child(-n+5) {
+    padding: 15px 35px 25px 35px;
+    margin-left: auto;
+}
+
+.nav__item::before {
+    border-bottom: 2px solid red;
 }
